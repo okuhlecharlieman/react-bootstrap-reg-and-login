@@ -1,18 +1,9 @@
-import Badge from "react-bootstrap/Badge";
-import Button from "react-bootstrap/Button";
+import Signup from "./Components/signup";
 import "./App.scss";
+import AppRouter from "./Components/appRouter";
 
 function App() {
-  return (
-    <div>
-      <h1>
-        Example heading
-        <Badge bg="secondary" as={Button}>
-          New
-        </Badge>
-      </h1>
-    </div>
-  );
+  return <AppRouter></AppRouter>;
 }
 
 export default App;
