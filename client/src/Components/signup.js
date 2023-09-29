@@ -20,7 +20,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("", formData)
+      .post("http://localhost:3001/", formData)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
     console.log(formData);
