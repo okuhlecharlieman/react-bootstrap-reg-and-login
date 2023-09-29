@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import axios from "axios";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -18,7 +19,10 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add form validation and submission logic here
+    axios
+      .post("", formData)
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
     console.log(formData);
   };
 
@@ -69,9 +73,12 @@ function Signup() {
           Sign Up
         </button>
       </form>
-      <Link to="/login" type="submit" className="m-2 btn btn-light">
-        login
-      </Link>
+      <div>
+        <p>Already have an account?</p>
+        <Link to="/login" type="submit" className="m-2 btn btn-light">
+          login
+        </Link>
+      </div>
     </div>
   );
 }
